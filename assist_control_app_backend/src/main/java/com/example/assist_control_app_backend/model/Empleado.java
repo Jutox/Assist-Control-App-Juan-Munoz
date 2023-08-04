@@ -2,7 +2,12 @@ package com.example.assist_control_app_backend.model;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import javax.persistence.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
 
 
 
@@ -88,7 +93,7 @@ public class Empleado {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-
+    /* 
     public Cargo getCargo() {
         return cargo;
     }
@@ -103,6 +108,6 @@ public class Empleado {
 
     public void setContrato(Contrato contrato) {
         this.contrato = contrato;
-    }
+    }*/
 
 }
