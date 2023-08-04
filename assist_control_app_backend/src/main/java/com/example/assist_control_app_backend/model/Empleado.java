@@ -1,14 +1,10 @@
 package com.example.assist_control_app_backend.model;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
-//Este comentario es un testeo de Branch
 
 @Entity
 public class Empleado {
@@ -22,6 +18,7 @@ public class Empleado {
     private String genero;
     private String correo;
 
+    
     @ManyToOne
     @JoinColumn(name = "id_cargo")
     @JsonBackReference

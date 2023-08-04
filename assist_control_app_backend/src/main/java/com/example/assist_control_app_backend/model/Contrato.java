@@ -3,8 +3,6 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.util.List;
 
@@ -13,13 +11,13 @@ public class Contrato{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id_contrato")
+
     private int id_contrato;
 
     private String tipoContrato;
    
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy= "empleado")
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy= "contrato")
     @JsonManagedReference
     private List<Empleado> empleados;
     

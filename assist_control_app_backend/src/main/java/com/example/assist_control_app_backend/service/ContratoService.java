@@ -8,8 +8,6 @@ import com.example.assist_control_app_backend.model.Empleado;
 
 public interface ContratoService {
     
-    public List<Contrato> getAllFacultades();
-
-    public void addFacultad(Contrato facultad);
+   
 
 }

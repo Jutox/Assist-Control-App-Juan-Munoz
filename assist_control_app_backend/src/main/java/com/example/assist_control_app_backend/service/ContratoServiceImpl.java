@@ -8,22 +8,14 @@ import org.springframework.stereotype.Service;
 import com.example.assist_control_app_backend.model.Cargo;
 import com.example.assist_control_app_backend.model.Contrato;
 import com.example.assist_control_app_backend.model.Empleado;
+import com.example.assist_control_app_backend.repository.ContratoRepository;
 
 @Service
 public class ContratoServiceImpl implements ContratoService{
 
-    @Override
-    public List<Contrato> getAllFacultades() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAllFacultades'");
-    }
-
-    @Override
-    public void addFacultad(Contrato facultad) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addFacultad'");
-    }
-    
+ 
+    @Autowired
+    private ContratoRepository contratoRepository;
 
 
 }

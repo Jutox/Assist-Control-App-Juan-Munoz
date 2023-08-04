@@ -1,26 +1,27 @@
 package com.example.assist_control_app_backend.model;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Cargo 
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id_cargo")
+  
     private int id_cargo;
 
     private String tipoCargo;
    
-
+    
     @OneToMany(cascade = CascadeType.ALL, mappedBy= "cargo")
     @JsonManagedReference
-    private List<Empleado> empleados;
+    private List<Empleado> empleados; 
     
     public Cargo(){}
 
@@ -46,4 +47,11 @@ public class Cargo
         this.tipoCargo = tipoCargo;
     }
 
+    public List<Empleado> getEmpleados() {
+        return empleados;
+    }
+    
+    public void setEmpleados(List<Empleado> empleados) {
+        this.empleados = empleados;
+    }
 }
