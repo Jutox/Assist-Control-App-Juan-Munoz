@@ -12,19 +12,9 @@ import ViewEmployeeComponent from './components/ViewEmployeeComponent';
 function App() {
   return (
     <div>
-        <Router>
-              <HeaderComponent />
-                <div className="container">
-                    <Routes> 
-                          <Route path = "/"  element = {ListEmployeeComponent}></Route>
-                          <Route path = "/employees" element = {ListEmployeeComponent}></Route>
-                          <Route path = "/add-employee/:id" element = {CreateEmployeeComponent}></Route>
-                          <Route path = "/view-employee/:id" element= {ViewEmployeeComponent}></Route>
-                          {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
-                    </Routes>
-                </div>
-              <FooterComponent />
-        </Router>
+      <HeaderComponent/> 
+      <ListEmployeeComponent/>
+      <FooterComponent/>
     </div>
     
   );

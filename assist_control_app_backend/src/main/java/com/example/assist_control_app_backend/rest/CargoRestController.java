@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import com.example.assist_control_app_backend.service.CargoService;
+import com.example.assist_control_app_backend.repository.CargosRepository;
 
 
 
@@ -13,7 +12,7 @@ import com.example.assist_control_app_backend.service.CargoService;
 @RequestMapping("/cargos")
 public class CargoRestController {
 
-    @Autowired
-    private CargoService cargoService;
+   @Autowired
+    private CargosRepository cargoRepository;
 
 }

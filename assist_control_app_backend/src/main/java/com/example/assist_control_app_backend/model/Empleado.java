@@ -4,6 +4,8 @@ package com.example.assist_control_app_backend.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -15,6 +17,7 @@ import jakarta.persistence.ManyToOne;
 public class Empleado {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_empleado;
 
     private String rut_empleado;
@@ -46,6 +49,14 @@ public class Empleado {
         this.edad = edad;
         this.genero = genero;
         this.correo = correo;
+    }
+
+    public int getId_empleado() {
+        return id_empleado;
+    }
+
+    public void setId_empleado(int id_empleado) {
+        this.id_empleado = id_empleado;
     }
 
     public String getRut_empleado() {
