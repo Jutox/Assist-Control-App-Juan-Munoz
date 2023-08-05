@@ -50,12 +50,11 @@ public class Cargo
         this.tipoCargo = tipoCargo;
     }
 
-    /* 
     public List<Empleado> getEmpleados() {
         return empleados;
     }
     
     public void setEmpleados(List<Empleado> empleados) {
         this.empleados = empleados;
-    }*/
+    }
 }

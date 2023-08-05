@@ -15,8 +15,9 @@ import jakarta.persistence.ManyToOne;
 public class Empleado {
     
     @Id
-    private String rut_empleado;
+    private int id_empleado;
 
+    private String rut_empleado;
     private String nombres;
     private String apellidos;
     private int edad;
@@ -36,8 +37,9 @@ public class Empleado {
 
     public Empleado(){super();}
 
-    public Empleado(String rut_empleado, String nombres, String apellidos, int edad, String genero, String correo){
+    public Empleado(int id_empleado, String rut_empleado, String nombres, String apellidos, int edad, String genero, String correo){
         super();
+        this.id_empleado = id_empleado;
         this.rut_empleado = rut_empleado;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -93,7 +95,7 @@ public class Empleado {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    /* 
+
     public Cargo getCargo() {
         return cargo;
     }
@@ -108,6 +110,6 @@ public class Empleado {
 
     public void setContrato(Contrato contrato) {
         this.contrato = contrato;
-    }*/
+    }
 
 }
