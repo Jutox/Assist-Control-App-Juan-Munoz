@@ -8,7 +8,7 @@ class ContratoService {
         return axios.get(CONTRATO_API_BASE_URL + '/' + contratoId);
     }
 
-    createEmployee(contrato){
+    createContrato(contrato){
         return axios.post(CONTRATO_API_BASE_URL, contrato);
     }
 
