@@ -42,9 +42,9 @@ export const ListEmployeeComponent = () => {
 
                             <thead>
                                 <tr>
-                                    <th> Employee First Name</th>
-                                    <th> Employee Last Name</th>
-                                    <th> Employee Email Id</th>
+                                    <th> Nombres</th>
+                                    <th> Apellidos</th>
+                                    <th> Correo</th>
                                     <th> Cargo</th>
                                     <th> Contrato</th>
                                 </tr>

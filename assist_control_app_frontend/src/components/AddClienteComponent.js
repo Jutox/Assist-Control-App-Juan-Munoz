@@ -57,7 +57,7 @@ export const AddClienteComponent = () => {
                                         </div>
 
                                         <button className="btn btn-success" onClick={(e) => saveCliente(e)}>Guardar</button>
-                                       
+                                        &nbsp;&nbsp;&nbsp;
                                         <Link to='/empleados' className='btn btn-danger'>Cancelar</Link>
                                     </form>
                                 </div>
