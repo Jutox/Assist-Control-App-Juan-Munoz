@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import EmployeeService from '../services/EmployeeService'
+import { Link } from 'react-router-dom';
 //import ContratoService from '../services/ContratoService'
 
 export const ListEmployeeComponent = () => {
 
     const [employees, setEmpleados] = useState([]);
-    const [contratos, setContratos] = useState([]);
+    //onst [contratos, setContratos] = useState([]);
 
     /*
     useEffect(() =>{
@@ -32,6 +33,7 @@ export const ListEmployeeComponent = () => {
         return (
             <div className="container"> {/* Aquí agregamos la clase "container" */}
                  <h2 className="text-center">Lista de Empleados</h2>
+                 <Link to= '/add-Empleado' className='btn btn-primary mb-2'>Agregar Cliente</Link>
                  <div className="row">
                  </div>
                  <br></br>
