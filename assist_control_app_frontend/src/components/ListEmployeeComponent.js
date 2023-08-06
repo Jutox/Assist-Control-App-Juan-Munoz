@@ -1,13 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import EmployeeService from '../services/EmployeeService'
 
 export const ListEmployeeComponent = () => {
 
     const [employees, setEmpleados] = useState([]);
+
+    useEffect(() =>{
+        EmployeeService.getEmployees().then(response => {
+            setEmpleados(response.data);
+            console.log(response.data);
+        }).catch(error => {
+            console.log(error);
+        })
+
+    },[])
     
         return (
             <div>
-                 <h2 className="text-center">Employees List</h2>
+                 <h2 className="text-center">Lista de Empleados</h2>
                  <div className = "row">
                    
                  </div>
@@ -20,22 +30,20 @@ export const ListEmployeeComponent = () => {
                                     <th> Employee First Name</th>
                                     <th> Employee Last Name</th>
                                     <th> Employee Email Id</th>
-                                    <th> Actions</th>
+                                    <th> Cargo</th>
+                                    <th> Contrato</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
                                     employees.map(
                                         employee => 
-                                        <tr key = { employee.id}>
-                                             <td> {employee.firstName} </td>   
-                                             <td> {employee.lastName}</td>
-                                             <td> {employee.emailId}</td>
-                                             <td>
-                                                 <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">View </button>
-                                             </td>
+                                        <tr key = {employee.id}>
+                                             <td> {employee.nombres} </td>   
+                                             <td> {employee.apellidos}</td>
+                                             <td> {employee.correo}</td>
+                                             <td> {employee.id_cargo}</td>
+                                             <td> {employee.id_contrato}</td>
                                         </tr>
                                     )
                                 }
