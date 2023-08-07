@@ -1,6 +1,6 @@
 INSERT INTO Contrato VALUES
-("contrato completo", 1),
-("contrato parcial", 2);
+("jornada completa", 1),
+("jornada parcial", 2);
 
 INSERT INTO Cargo VALUES
 ("DPS", 11),

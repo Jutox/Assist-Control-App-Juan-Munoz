@@ -15,6 +15,13 @@ export const AddEmpleadoComponent = () => {
 
     const saveCliente = (e) => {
         e.preventDefault();
+
+        // Comprueba si alguno de los campos está vacío
+        if (!nombres || !apellidos || !correo || !cargo || !contrato) {
+            alert('Todos los campos deben ser llenados. Por favor, completa el formulario.');
+            return;
+        }
+
         cargo = {
             tipoCargo: cargo
         };
