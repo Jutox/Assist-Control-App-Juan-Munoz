@@ -1,18 +1,18 @@
 import React, { useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import ContratoService from '../services/contratoService.js'
+import CargoService from '../services/cargoService.js'
 
 
-export const AddContratoComponent = () => {
+export const AddCargoComponent = () => {
 
-    const [tipoContrato, setContrato] = useState('');
+    const [tipoCargo, setCargo] = useState('');
     const navigate = useNavigate();
 
-    const saveContrato = (e) => {
+    const saveCargo = (e) => {
         e.preventDefault();
-        const contrato = {tipoContrato}
-        ContratoService.createContrato(contrato).then((response) => {
+        const cargo = {tipoCargo}
+        CargoService.createCargo(cargo).then((response) => {
             console.log(response.data);
             navigate('/empleados')
         }).catch(error => {
@@ -26,19 +26,19 @@ export const AddContratoComponent = () => {
                    <div className = "container">
                         <div className = "row">
                             <div className = "card col-md-6 offset-md-3 offset-md-3">
-                                <h2 className='text-center'>Registro de empleados</h2>
+                                <h2 className='text-center'>Creacion de cargo</h2>
                                 <div className = "card-body">
                                     <form>
                                         <div className = "form-group mb-2">
-                                            <label> Tipo contrato: </label>
-                                            <input placeholder="Tipo Contrato" 
-                                            name="tipoContrato" 
+                                            <label> Tipo cargo: </label>
+                                            <input placeholder="Tipo cargo" 
+                                            name="tipoCargo" 
                                             className="form-control" 
-                                            value={tipoContrato} 
-                                            onChange={(e) => setContrato(e.target.value)}/>
+                                            value={tipoCargo} 
+                                            onChange={(e) => setCargo(e.target.value)}/>
                                         </div>
 
-                                        <button className="btn btn-success" onClick={(e) => saveContrato(e)}>Guardar</button>
+                                        <button className="btn btn-success" onClick={(e) => saveCargo(e)}>Guardar</button>
                                         &nbsp;&nbsp;&nbsp;
                                         <Link to='/empleados' className='btn btn-danger'>Cancelar</Link>
                                     </form>
@@ -51,4 +51,4 @@ export const AddContratoComponent = () => {
     )
 }
 
-export default AddContratoComponent;
+export default AddCargoComponent;

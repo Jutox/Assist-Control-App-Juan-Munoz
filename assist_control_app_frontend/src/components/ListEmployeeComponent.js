@@ -34,6 +34,10 @@ export const ListEmployeeComponent = () => {
             <div className="container"> {/* Aquí agregamos la clase "container" */}
                  <h2 className="text-center">Lista de Empleados</h2>
                  <Link to= '/add-Empleado' className='btn btn-primary mb-2'>Agregar Cliente</Link>
+                 &nbsp;&nbsp;&nbsp;
+                 <Link to= '/add-Contrato' className='btn btn-primary mb-2'>Agregar Contrato</Link>
+                 &nbsp;&nbsp;&nbsp;
+                 <Link to= '/add-Cargo' className='btn btn-primary mb-2'>Agregar Cargo</Link>
                  <div className="row">
                  </div>
                  <br></br>

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.assist_control_app_backend.exception.ResourceNotFoundException;
 import com.example.assist_control_app_backend.model.Contrato;
-import com.example.assist_control_app_backend.model.Empleado;
 import com.example.assist_control_app_backend.repository.ContratoRepository;
 
 @CrossOrigin(origins = "http://localhost:3000")

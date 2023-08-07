@@ -36,7 +36,7 @@ export const AddClienteComponent = () => {
                    <div className = "container">
                         <div className = "row">
                             <div className = "card col-md-6 offset-md-3 offset-md-3">
-                                <h2 className='text-center'>Registro de empleados</h2>
+                                <h2 className='text-center'>Creacion de contratos</h2>
                                 <div className = "card-body">
                                     <form>
                                         <div className = "form-group mb-2">
