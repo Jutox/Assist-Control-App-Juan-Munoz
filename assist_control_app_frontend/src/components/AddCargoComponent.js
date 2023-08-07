@@ -31,7 +31,7 @@ export const AddCargoComponent = () => {
                                     <form>
                                         <div className = "form-group mb-2">
                                             <label> Tipo cargo: </label>
-                                            <input placeholder="Tipo cargo" 
+                                            <input placeholder="nuevo cargo" 
                                             name="tipoCargo" 
                                             className="form-control" 
                                             value={tipoCargo} 

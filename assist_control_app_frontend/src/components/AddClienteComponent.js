@@ -36,45 +36,45 @@ export const AddClienteComponent = () => {
                    <div className = "container">
                         <div className = "row">
                             <div className = "card col-md-6 offset-md-3 offset-md-3">
-                                <h2 className='text-center'>Creacion de contratos</h2>
+                                <h2 className='text-center'>Registro de empleados</h2>
                                 <div className = "card-body">
                                     <form>
                                         <div className = "form-group mb-2">
-                                            <label> First Name: </label>
-                                            <input placeholder="First Name" 
-                                            name="firstName" 
+                                            <label> Nombres: </label>
+                                            <input placeholder="nombres" 
+                                            name="Nombres" 
                                             className="form-control" 
                                             value={nombres} 
                                             onChange={(e) => setNombre(e.target.value)}/>
                                         </div>
 
                                         <div className = "form-group mb-2">
-                                            <label> Last Name: </label>
-                                            <input placeholder="Last Name" 
-                                            name="lastName" className="form-control" 
+                                            <label> Apellidos: </label>
+                                            <input placeholder="apellidos" 
+                                            name="Apellidos" className="form-control" 
                                             value={apellidos} 
                                             onChange={(e) => setApellido(e.target.value)}/>
                                         </div>
 
                                         <div className = "form-group mb-2">
-                                            <label> Email Id: </label>
-                                            <input placeholder="Email Address" 
-                                            name="emailId" className="form-control" 
+                                            <label> Correo: </label>
+                                            <input placeholder="direccion de Correo" 
+                                            name="correo" className="form-control" 
                                             value={correo} 
                                             onChange={(e) => setCorreo(e.target.value)}/>
                                         </div>
 
                                         <div className = "form-group mb-2">
                                             <label> Cargo: </label>
-                                            <input placeholder="Cargo" 
-                                            name="emailId" className="form-control" 
+                                            <input placeholder="cargo" 
+                                            name="cargo" className="form-control" 
                                             value={cargo} 
                                             onChange={(e) => setCargo(e.target.value)}/>
                                         </div>
 
                                         <div className = "form-group mb-2">
                                             <label> Tipo Contrato: </label>
-                                            <input placeholder="Tipo Contrato" 
+                                            <input placeholder="tipo Contrato" 
                                             name="Contrato" className="form-control" 
                                             value={contrato} 
                                             onChange={(e) => setContrato(e.target.value)}/>

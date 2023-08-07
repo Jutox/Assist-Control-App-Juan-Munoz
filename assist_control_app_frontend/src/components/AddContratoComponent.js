@@ -26,12 +26,12 @@ export const AddContratoComponent = () => {
                    <div className = "container">
                         <div className = "row">
                             <div className = "card col-md-6 offset-md-3 offset-md-3">
-                                <h2 className='text-center'>Registro de empleados</h2>
+                                <h2 className='text-center'>Creacion de Contrato</h2>
                                 <div className = "card-body">
                                     <form>
                                         <div className = "form-group mb-2">
                                             <label> Tipo contrato: </label>
-                                            <input placeholder="Tipo Contrato" 
+                                            <input placeholder="nuevo contrato" 
                                             name="tipoContrato" 
                                             className="form-control" 
                                             value={tipoContrato} 
