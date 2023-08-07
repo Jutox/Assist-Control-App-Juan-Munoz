@@ -9,6 +9,6 @@ INSERT INTO Cargo VALUES
 ("support", 14);
 
 INSERT INTO Empleado VALUES
-(301, "Munoz", "masterjuan-@hotmail.com", "Juan", "DPS" ,"contrato completo"),
-(302, "Inostroza", "victor_inhox-@hotmail.com", "Victor ", "DPS" ,"contrato completo"),
-(303, "Lopez", "dani_lopez-@hotmail.com", "Benjamin ", "support", "contrato parcial");
+(301, "Munoz", "masterjuan-@hotmail.com", "Juan", "DPS" ,"jornada completa"),
+(302, "Inostroza", "victor_inhox-@hotmail.com", "Victor ", "DPS" ,"jornada completa"),
+(303, "Lopez", "dani_lopez-@hotmail.com", "Benjamin ", "support", "jornada parcial");

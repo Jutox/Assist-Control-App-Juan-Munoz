@@ -1,10 +1,10 @@
 import React, { useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import EmployeeService from '../services/EmployeeService'
+import EmpleadoService from '../services/EmpleadoService'
 
 
-export const AddClienteComponent = () => {
+export const AddEmpleadoComponent = () => {
 
     const [nombres, setNombre] = useState('');
     const [apellidos, setApellido] = useState('');
@@ -22,11 +22,12 @@ export const AddClienteComponent = () => {
             tipoContrato: contrato
         }
         const empleado = {nombres, apellidos, correo, cargo, contrato}
-        EmployeeService.createEmployee(empleado).then((response) => {
+        EmpleadoService.createEmpleado(empleado).then((response) => {
             console.log(response.data);
             navigate('/empleados')
         }).catch(error => {
             console.log(error)
+            alert('La captura de datos tuvo un error. Por favor, intenta nuevamente.');
         })
     }
 
@@ -93,4 +94,4 @@ export const AddClienteComponent = () => {
     )
 }
 
-export default AddClienteComponent;
+export default AddEmpleadoComponent;

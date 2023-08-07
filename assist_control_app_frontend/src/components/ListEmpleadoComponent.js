@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import EmployeeService from '../services/EmployeeService';
+import EmpleadoService from '../services/EmpleadoService';
 import { Link } from 'react-router-dom';
 
-export const ListEmployeeComponent = () => {
-    const [employees, setEmpleados] = useState([]);
+export const ListEmpleadoComponent = () => {
+    const [empleados, setEmpleados] = useState([]);
     const [searchName, setSearchName] = useState('');
     const [searchCargo, setSearchCargo] = useState('');
     const [searchContrato, setSearchContrato] = useState('');
 
     useEffect(() => {
-        EmployeeService.getEmployees().then((response) => {
+        EmpleadoService.getEmpleados().then((response) => {
             setEmpleados(response.data);
             console.log(response.data);
         }).catch((error) => {
@@ -17,11 +17,11 @@ export const ListEmployeeComponent = () => {
         });
     }, []);
 
-    const filteredEmployees = employees.filter((employee) => {
+    const filteredEmpleados = empleados.filter((empleado) => {
         return (
-            employee.nombres.toLowerCase().includes(searchName.toLowerCase()) &&
-            employee.cargo.tipoCargo.toLowerCase().includes(searchCargo.toLowerCase()) &&
-            employee.contrato.tipoContrato.toLowerCase().includes(searchContrato.toLowerCase())
+            empleado.nombres.toLowerCase().includes(searchName.toLowerCase()) &&
+            empleado.cargo.tipoCargo.toLowerCase().includes(searchCargo.toLowerCase()) &&
+            empleado.contrato.tipoContrato.toLowerCase().includes(searchContrato.toLowerCase())
         );
     });
 
@@ -77,13 +77,13 @@ export const ListEmployeeComponent = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredEmployees.map((employee) => (
-                            <tr key={employee.id}>
-                                <td>{employee.nombres}</td>
-                                <td>{employee.apellidos}</td>
-                                <td>{employee.correo}</td>
-                                <td>{employee.cargo.tipoCargo}</td>
-                                <td>{employee.contrato.tipoContrato}</td>
+                        {filteredEmpleados.map((empleado) => (
+                            <tr key={empleado.id}>
+                                <td>{empleado.nombres}</td>
+                                <td>{empleado.apellidos}</td>
+                                <td>{empleado.correo}</td>
+                                <td>{empleado.cargo.tipoCargo}</td>
+                                <td>{empleado.contrato.tipoContrato}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -93,4 +93,4 @@ export const ListEmployeeComponent = () => {
     );
 };
 
-export default ListEmployeeComponent;
+export default ListEmpleadoComponent;
