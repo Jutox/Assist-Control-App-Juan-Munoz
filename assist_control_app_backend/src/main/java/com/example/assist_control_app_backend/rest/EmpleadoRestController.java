@@ -1,8 +1,11 @@
 package com.example.assist_control_app_backend.rest;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +32,7 @@ public class EmpleadoRestController {
    // get all empleados
 	@GetMapping("/empleados")
 	public List<Empleado> getAllempleados(){
+
 		return empleadoRepository.findAll();
 	}		
 

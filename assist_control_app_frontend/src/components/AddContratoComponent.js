@@ -47,14 +47,6 @@ export const AddContratoComponent = () => {
                                             onChange={(e) => setApellido(e.target.value)}/>
                                         </div>
 
-                                        <div className = "form-group mb-2">
-                                            <label> Email Id: </label>
-                                            <input placeholder="Email Address" 
-                                            name="emailId" className="form-control" 
-                                            value={correo} 
-                                            onChange={(e) => setCorreo(e.target.value)}/>
-                                        </div>
-
                                         <button className="btn btn-success" onClick={(e) => saveCliente(e)}>Guardar</button>
                                         &nbsp;&nbsp;&nbsp;
                                         <Link to='/empleados' className='btn btn-danger'>Cancelar</Link>

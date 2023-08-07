@@ -27,12 +27,10 @@ public class Empleado {
     
     @ManyToOne
     @JoinColumn(name = "id_cargo")
-    @JsonBackReference
     private Cargo cargo;
 
     @ManyToOne
     @JoinColumn(name = "id_contrato")
-    @JsonBackReference
     private Contrato contrato;
 
     public Empleado(){super();}

@@ -1,14 +1,14 @@
 INSERT INTO Contrato VALUES
-(1, "contrato completo"),
-(2, "contrato parcial");
+("contrato completo", 1),
+("contrato parcial", 2);
 
 INSERT INTO Cargo VALUES
-(11, "DPS"),
-(12, "pro player"),
-(13, "call master"),
-(14, "support");
+("DPS", 11),
+("pro player", 12),
+("call master", 13),
+("support", 14);
 
 INSERT INTO Empleado VALUES
-(301, "Munoz", "masterjuan-@hotmail.com", "Juan",  12, 1),
-(302, "Inostroza", "victor_inhox-@hotmail.com", "Victor ", 14, 1),
-(303, "Lopez", "dani_lopez-@hotmail.com", "Benjamin ", 14, 2);
+(301, "Munoz", "masterjuan-@hotmail.com", "Juan", "DPS" ,"contrato completo"),
+(302, "Inostroza", "victor_inhox-@hotmail.com", "Victor ", "DPS" ,"contrato completo"),
+(303, "Lopez", "dani_lopez-@hotmail.com", "Benjamin ", "support", "contrato parcial");

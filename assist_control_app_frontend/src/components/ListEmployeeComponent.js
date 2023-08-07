@@ -57,8 +57,8 @@ export const ListEmployeeComponent = () => {
                                              <td> {employee.nombres} </td>   
                                              <td> {employee.apellidos}</td>
                                              <td> {employee.correo}</td>
-                                             <td> {employee.id_cargo}</td>
-                                             <td> {employee.id_contrato}</td>
+                                             <td> {employee.cargo.tipoCargo}</td>
+                                             <td> {employee.contrato.tipoContrato}</td>
                                         </tr>
                                     )
                                 }

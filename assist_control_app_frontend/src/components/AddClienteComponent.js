@@ -9,11 +9,19 @@ export const AddClienteComponent = () => {
     const [nombres, setNombre] = useState('');
     const [apellidos, setApellido] = useState('');
     const [correo, setCorreo] = useState('');
+    let [cargo, setCargo] = useState('');
+    let [contrato, setContrato] = useState('');
     const navigate = useNavigate();
 
     const saveCliente = (e) => {
         e.preventDefault();
-        const empleado = {nombres, apellidos, correo}
+        cargo = {
+            tipoCargo: cargo
+        };
+        contrato = {
+            tipoContrato: contrato
+        }
+        const empleado = {nombres, apellidos, correo, cargo, contrato}
         EmployeeService.createEmployee(empleado).then((response) => {
             console.log(response.data);
             navigate('/empleados')
@@ -54,6 +62,22 @@ export const AddClienteComponent = () => {
                                             name="emailId" className="form-control" 
                                             value={correo} 
                                             onChange={(e) => setCorreo(e.target.value)}/>
+                                        </div>
+
+                                        <div className = "form-group mb-2">
+                                            <label> Cargo: </label>
+                                            <input placeholder="Cargo" 
+                                            name="emailId" className="form-control" 
+                                            value={cargo} 
+                                            onChange={(e) => setCargo(e.target.value)}/>
+                                        </div>
+
+                                        <div className = "form-group mb-2">
+                                            <label> Tipo Contrato: </label>
+                                            <input placeholder="Tipo Contrato" 
+                                            name="Contrato" className="form-control" 
+                                            value={contrato} 
+                                            onChange={(e) => setContrato(e.target.value)}/>
                                         </div>
 
                                         <button className="btn btn-success" onClick={(e) => saveCliente(e)}>Guardar</button>
