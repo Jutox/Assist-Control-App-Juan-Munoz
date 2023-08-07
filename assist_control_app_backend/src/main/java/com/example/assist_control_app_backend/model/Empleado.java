@@ -20,11 +20,8 @@ public class Empleado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_empleado;
 
-    private String rut_empleado;
     private String nombres;
     private String apellidos;
-    private int edad;
-    private String genero;
     private String correo;
 
     
@@ -40,14 +37,11 @@ public class Empleado {
 
     public Empleado(){super();}
 
-    public Empleado(int id_empleado, String rut_empleado, String nombres, String apellidos, int edad, String genero, String correo){
+    public Empleado(int id_empleado, String nombres, String apellidos, String correo){
         super();
         this.id_empleado = id_empleado;
-        this.rut_empleado = rut_empleado;
         this.nombres = nombres;
         this.apellidos = apellidos;
-        this.edad = edad;
-        this.genero = genero;
         this.correo = correo;
     }
 
@@ -57,14 +51,6 @@ public class Empleado {
 
     public void setId_empleado(int id_empleado) {
         this.id_empleado = id_empleado;
-    }
-
-    public String getRut_empleado() {
-        return rut_empleado;
-    }
-
-    public void setRut_empleado(String rut_empleado) {
-        this.rut_empleado = rut_empleado;
     }
 
     public String getNombres() {
@@ -81,22 +67,6 @@ public class Empleado {
 
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
     }
 
     public String getCorreo() {
