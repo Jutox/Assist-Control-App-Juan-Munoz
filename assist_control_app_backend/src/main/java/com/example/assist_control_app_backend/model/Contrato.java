@@ -15,23 +15,17 @@ import jakarta.persistence.CascadeType;
 public class Contrato{
     
     @Id
+    private String tipoContrato;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int id_contrato;
-
-    private String tipoContrato;
-   
-    
-    @OneToMany(cascade = CascadeType.ALL, mappedBy= "contrato")
-    @JsonManagedReference
-    private List<Empleado> empleados;
     
     public Contrato(){}
 
-    public Contrato(int id_contrato, String tipoContrato){
+    public Contrato(String tipoContrato, int id_contrato){
         super();
-        this.id_contrato = id_contrato;
         this.tipoContrato = tipoContrato;
+        this.id_contrato = id_contrato;
     }
 
     public int getId_contrato() {

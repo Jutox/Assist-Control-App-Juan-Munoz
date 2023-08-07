@@ -16,22 +16,17 @@ import jakarta.persistence.OneToMany;
 public class Cargo 
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-  
-    private int id_cargo;
-
     private String tipoCargo;
-   
-    @OneToMany(cascade = CascadeType.ALL, mappedBy= "cargo")
-    @JsonManagedReference
-    private List<Empleado> empleados;
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_cargo;
     
     public Cargo(){}
 
-    public Cargo(int id_cargo, String tipoCargo){
+    public Cargo(String tipoCargo, int id_cargo){
         super();
-        this.id_cargo = id_cargo;
         this.tipoCargo = tipoCargo;
+        this.id_cargo = id_cargo;
     }
 
     public int getId_cargo() {
@@ -50,6 +45,7 @@ public class Cargo
         this.tipoCargo = tipoCargo;
     }
 
+    /*
     public List<Empleado> getEmpleados() {
         return empleados;
     }
@@ -57,4 +53,5 @@ public class Cargo
     public void setEmpleados(List<Empleado> empleados) {
         this.empleados = empleados;
     }
+    */
 }
